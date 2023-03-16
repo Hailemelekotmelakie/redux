@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useDispatch, useSelector } from 'react-redux'
+import { actionAdd, actionMinus } from './redux/action/userAction';
+import { Button, Input, Wrapper } from './Styles/Button';
 
 function App() {
+  const dispatch = useDispatch();
+  const list = useSelector((state) => state.list)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Button
+        onClick={() => {
+          dispatch(actionAdd({ name: 7 }))
+        }}
+      >
+        Add
+      </Button>
+      <Button
+        onClick={() => {
+          dispatch(actionMinus({ name: 67 }))
+        }}
+      >
+        Add
+      </Button>
+      <Input placeholder='email' />
+      <div>
+        {list.map((val) => {
+          return <div>{val.name}</div>
+        })}
+      </div>
+    </Wrapper>
   );
 }
 
