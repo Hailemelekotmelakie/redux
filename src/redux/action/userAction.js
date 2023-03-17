@@ -10,5 +10,11 @@ const actionMinus = (data) => {
         pyload: data
     }
 }
+const actionUpdata = (data) => {
+    return {
+        type: "UPDATE",
+        pyload: data
+    }
+}
 
-export { actionAdd, actionMinus }
+export { actionAdd, actionMinus, actionUpdata }
