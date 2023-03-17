@@ -1,6 +1,6 @@
-This is a simple redux working crud operation using react state
-
-## Available Scripts
+ # This is a simple redux working crud operation using react state
+ 
+### Available Scripts
 
 In the project directory, you can run:
 
