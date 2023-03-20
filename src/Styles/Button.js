@@ -1,12 +1,33 @@
 import styled from 'styled-components'
 
+const Body = styled.body`
+    display: flex;
+     align-item: center;
+    justify-content: center;
+    `
 const Wrapper = styled.div`
     display: flex;
-      flex-direction: column;
-      align-item: center;
-      justify-content: space-between;
-      gap: 30px;
-      width: min-content
+    flex-direction: column;
+    align-item: center;
+    justify-content: center;
+    gap: 30px;
+    width: min-content;
+    text-align:center;
+    font-size:18px;
+}
+ `
+const OneCont = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-item: center;
+    justify-content: center;
+    gap: 30px;
+    width: min-content;
+    text-align:center;
+    font-size:18px;
+    background-color: #b0c6dd;
+    border-radius: 10px;
+    color:blue;
  `
 
 const Button = styled.button`
@@ -15,7 +36,7 @@ const Button = styled.button`
         justify-content: center;
         cursor: pointer;
         border-radius: 8px;
-        color: #fff;
+        color: blue;
         background: linear-gradient(to right, #9C27B0, #E040FB);
         border: 0;
          font-family: 'Ubuntu', sans-serif;
@@ -38,12 +59,25 @@ const Input = styled.input`
     border-radius: 20px;
     outline: none;
     box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.02);
+     border: 2px solid rgba(0, 0, 0, 0.02);
+    ::placeholder,
+    ::-webkit-input-placeholder {
+        color: black;
+    }
+    :-ms-input-placeholder {
+        color: black;
+    }
     &:hover, 
     &:focus{
          border: 2px solid rgba(0, 0, 0, 0.18)
     }
+
 `
+const ButtonsContainer = styled.div`
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        `
 
 
-export { Button, Input, Wrapper }
+export { Button, Input, Wrapper, OneCont, ButtonsContainer, Body }
